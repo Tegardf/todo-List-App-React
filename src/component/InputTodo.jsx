@@ -18,16 +18,16 @@ function InputTodo() {
   };
 
   return (
-    <div className="w-full flex justify-between text-lg">
+    <div className="w-full flex justify-between text-lg gap-1.5">
       <input
-        className="w-9/12 p-1 px-3 rounded-md focus:outline-none focus:border-green-400 focus:ring-4 focus:ring-green-400"
+        className="w-4/5 p-1 px-3 bg-color1 font-semibold placeholder-color6 rounded-md focus:outline-none focus:border-color5 focus:ring-4 focus:ring-color5"
         type="text"
         name="todo"
         placeholder="new todo"
         value={input}
         onChange={(e) => setinput(e.target.value)}
       />
-      <button className="w-2/12 p-1 rounded-md font-bold text-white  bg-green-500 hover:bg-green-600 active:bg-green-800 focus:outline-none focus:border-green-400 focus:ring-4 focus:ring-green-400" onClick={clickHandle}>
+      <button className="grow p-1 rounded-md font-bold bg-color4 hover:bg-color2 hover:text-color6 active:bg-color1 focus:outline-none focus:border-color5 focus:ring-4 focus:ring-color5" onClick={clickHandle}>
         Add
       </button>
     </div>

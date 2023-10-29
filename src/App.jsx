@@ -4,8 +4,8 @@ import './App.css'
 function App() {
   return (
     <>
-      <div className="flex flex-col min-h-screen items-center px-6 bg-blue-100">
-        <div className="flex flex-col gap-3 p-6 mt-10 w-full border-solid rounded-2xl bg-green-300 ">
+      <div className="flex flex-col min-h-screen items-center px-6 bg-color2">
+        <div className="flex flex-col gap-3 p-6 my-10 shadow-custom w-full max-w-xl border-solid rounded-2xl border-4 border-color5 bg-color3 text-color5">
           <h1 className="text-4xl font-bold text-center my-5 ">
             My Todo List
           </h1>

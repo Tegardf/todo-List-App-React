@@ -41,9 +41,10 @@ function successGetTodos(data) {
 }
 export function getTodos(param='') {
   return async function(dispatch){
-    dispatch(startFetching())
+    if (param=='') {
+      dispatch(startFetching())
+    }
     const {data} = await axios(API_URL+param)
-    // console.log(data);
     dispatch(successGetTodos(data))
   }
 }
@@ -55,13 +56,11 @@ export const addTodo = (newTodo) => async (dispatch) =>{
 }
 
 export const deleteTodo = (id) => async (dispatch) =>{
-  dispatch(startFetching())
   await axios.delete(API_URL+`/${id}`)
   dispatch(getTodos())
 }
 
 export const updateTodo = (id,value) => async (dispatch)=>{
-  dispatch(startFetching())
   await axios.put(API_URL+`/${id}`,value)
   dispatch(getTodos())
 }
