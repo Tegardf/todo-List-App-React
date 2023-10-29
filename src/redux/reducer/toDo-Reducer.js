@@ -56,11 +56,13 @@ export const addTodo = (newTodo) => async (dispatch) =>{
 }
 
 export const deleteTodo = (id) => async (dispatch) =>{
+  dispatch(startFetching())
   await axios.delete(API_URL+`/${id}`)
   dispatch(getTodos())
 }
 
 export const updateTodo = (id,value) => async (dispatch)=>{
+  dispatch(startFetching())
   await axios.put(API_URL+`/${id}`,value)
   dispatch(getTodos())
 }
